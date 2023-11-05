@@ -15,10 +15,12 @@ export default function App() {
   
     // fetching the GET route from the Express server which matches the GET route from server.js
     return (
-        <ul className="App-intro">
+      <div style={{marginLeft:"10%", marginRight:"20%"}}>
+        <h1>INFORMAATIOTA</h1>
         <ListGroup>
-          {tieto.map((item, index) => (<ListGroup.Item key={index}>{item.price} {item.startDate} {item.endDate}</ListGroup.Item>))}
+          {tieto.map((item, index) => (
+          <ListGroup.Item key={index}><b>{item.price}</b><br></br><b>START DATE: </b>{item.startDate} <br></br><b>END DATE: </b>{item.endDate}</ListGroup.Item>))}
         </ListGroup>
-        </ul>
+      </div>
     );
 }
